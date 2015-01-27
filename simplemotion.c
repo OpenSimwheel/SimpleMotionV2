@@ -460,6 +460,14 @@ SM_STATUS smExecuteCommandQueue( const smbus bushandle, const smaddr targetaddre
     return recordStatus(bushandle,smTransmitReceiveCommandQueue(bushandle,targetaddress,SMCMD_INSTANT_CMD));
 }
 
+SM_STATUS smExecuteFastCommandQueue( const smbus bushandle, const smaddr targetaddress )
+{
+    //check if bus handle is valid & opened
+    if(smIsHandleOpen(bushandle)==smfalse) return SM_ERR_NODEVICE;
+
+    return recordStatus(bushandle,smTransmitReceiveCommandQueue(bushandle,targetaddress,SMCMD_FAST_CMD));
+}
+
 SM_STATUS smUploadCommandQueueToDeviceBuffer( const smbus bushandle, const smaddr targetaddress )
 {
     return recordStatus(bushandle,smTransmitReceiveCommandQueue(bushandle,targetaddress,SMCMD_BUFFERED_CMD));

@@ -8,6 +8,6 @@ include(SimpleMotionV2.pri)
 
 QT       -= gui
 
-TARGET = simplemotionv2
+TARGET = SimpleMotionV2_OpenSimwheel
 TEMPLATE = lib
 

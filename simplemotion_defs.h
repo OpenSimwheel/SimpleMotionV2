@@ -99,6 +99,26 @@
 #define SMP_TIMEOUT 12
 #define SMP_CUMULATIVE_STATUS 13 //error bits are set here if any, (SMP_CMD_STATUS_... bits). clear by writing 0
 
+//OpenSimwheel specific params
+#define SMP_OSW_EFFECTS_DAMPING_STR 101		 	// 0-65565
+#define SMP_OSW_EFFECTS_CENTERSPRING_STR 105 	// 0-65565
+#define SMP_OSW_EFFECTS_OVERALL_STR 110 			// 0-65565
+
+//#define SMP_OSW_EFFECTS 103
+//    #define OSW_EFFECT_DAMPING_ENABLE BV(1)
+//    #define OSW_EFFECT_CENTERSPRING_ENABLE BV(2)
+
+#define SMP_OSW_HARDSTOPS_POS 120			// 0-32000
+#define SMP_OSW_JOYSTICK_POS 121					// -32768-32767
+
+#define SMP_OSW_TORQUE_SETPOINT 122		// -32768-32767
+#define SMP_OSW_VELOCITY_FB 123
+
+#define SMP_OSW_VELOCITY_SAMPLES 124
+
+// custom
+#define SMP_PWM_DUTYCYCLE 6110
+
 //bit mask
 #define SM_BUFCMD_STAT_IDLE 1
 #define SM_BUFCMD_STAT_RUN 2
